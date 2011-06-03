@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  vorname: Robert
+  nachname: Kolle
+  email: robert.kolle@smail.inf.h-brs.de
+  username: kkolle2s
+  avatar: MyString
+
+two:
+  vorname: MyString
+  nachname: MyString
+  email: MyString
+  username: MyString
+  avatar: MyString
