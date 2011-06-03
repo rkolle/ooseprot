@@ -1,8 +1,9 @@
 class LoginController < ApplicationController
   def authenticationForm
+    @users = User.all
   end
   
-  def authenticate
+  def test
     
   end
 end

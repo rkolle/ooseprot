@@ -7,4 +7,7 @@ class User < ActiveRecord::Base
     :with => %r{\.(gif|jpg|png)$}i,
     :message => 'Kann entweder ein JPG, GIF oder PNG'
     
+    default_scope :order => 'nachname'
+    
+    
 end

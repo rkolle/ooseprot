@@ -1,6 +1,12 @@
-<input name="username">
-<imput pw="password">
-
-<div></div>
-
-<=% >
+<% if notice %>
+	<p id="notice"><%= notice %></p>
+	<% end %>
+	
+	<h5>list of available users</h5>
+	
+	<% @users.each do |user| %>
+		<div class="userentry">
+			<%= image_tag(user.avatar) %>&nbsp;<%= sanitize(user.username) %>&nbsp;
+			<%= user.nachname %>, <%= user.vorname %>
+		</div>
+	<% end %>

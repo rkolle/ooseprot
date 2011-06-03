@@ -1,0 +1,14 @@
+
+
+div img {
+	width: 32px;
+	height: 32px;
+
+}
+
+.userentry {
+	background: #eee;
+	padding: 5px;
+	margin: 5px;
+	width: 30%;
+}
