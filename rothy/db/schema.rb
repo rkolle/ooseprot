@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110603111900) do
+ActiveRecord::Schema.define(:version => 20110605224915) do
+
+  create_table "profiles", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "handy"
+    t.string   "icq"
+    t.string   "skype"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "vorname"

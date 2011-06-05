@@ -1,4 +1,8 @@
 Rothy::Application.routes.draw do
+  resources :usergroups
+
+  resources :preferences
+
   resources :profiles
 
   get "login/authenticationForm"
