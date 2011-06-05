@@ -2,6 +2,9 @@ Rothy::Application.routes.draw do
   get "login/authenticationForm"
 
   resources :users
+  
+  # Eigene Routen
+  # map.connect '', :controller => "login_controller", :action => "check"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -52,7 +55,7 @@ Rothy::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "login#authenticationForm", :as => 'store'
+  root :to => "login#authenticationForm", :as => 'LogIn'
 
   # See how all your routes lay out with "rake routes"
 

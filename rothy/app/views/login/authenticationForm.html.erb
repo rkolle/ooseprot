@@ -9,4 +9,16 @@
 			<%= image_tag(user.avatar) %>&nbsp;<%= sanitize(user.username) %>&nbsp;
 			<%= user.nachname %>, <%= user.vorname %>
 		</div>
-	<% end %>
+
+
+<% form_tag :action => "check" do %>
+  <h3>Login</h3>
+
+  <label for="user_login">Benutzername:</label><br/>
+  <%= text_field_tag "username", :size => 20 %><br/>
+
+  <label for="user_password">Password:</label><br/>
+  <%= password_field_tag "password", :size => 20 %><br/>
+
+  <%= submit_tag "Login" %>
+<% end %>
