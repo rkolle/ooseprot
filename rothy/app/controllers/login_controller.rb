@@ -2,10 +2,10 @@ class LoginController < ApplicationController
 
   #before_filter :login_required, :only => ['welcome', 'change_password', 'hidden']
 
-  def authenticationForm
+  def authentication_form
     @users = User.all
   end
-  
+
   def signup
     @user = User.new(@params[:user])
     if request.post?
@@ -21,16 +21,16 @@ class LoginController < ApplicationController
 
   def check
     if request.post?
-	  u = User.where(:username => params[:username]).first
+      u = User.where(:username => params[:username]).first
 
       if u != nil
         session[:user] = u
-		flash[:message]  = "Login erfolgreich"
-		redirect_to :controller => 'users', :action => 'index'
+        flash[:message] = "Login erfolgreich"
+        redirect_to :controller => 'users', :action => 'index'
       else
-		session[:user] = nil
+        session[:user] = nil
         flash[:warning] = "Falsche Daten eingegeben!"
-		redirect_to :action => "authenticationForm"
+        redirect_to :action => "authenticationForm"
       end
     end
   end
@@ -45,10 +45,10 @@ class LoginController < ApplicationController
     if request.post?
       u= User.find_by_email(params[:user][:email])
       if u and u.send_new_password
-        flash[:message]  = "A new password has been sent by email."
+        flash[:message] = "A new password has been sent by email."
         redirect_to :action=>'login'
       else
-        flash[:warning]  = "Couldn't send password"
+        flash[:warning] = "Couldn't send password"
       end
     end
   end

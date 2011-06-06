@@ -16,10 +16,10 @@
   	    <h3>Login</h3>
 
         <label for="user_login">Benutzername:</label><br/>
-        <%= text_field_tag "username", :size => 20 %><br/>
+        <%= text_field_tag "username", 'Username', :size => 20 %><br/>
 
         <label for="user_password">Password:</label><br/>
-        <%= password_field_tag "password", :size => 20 %><br/>
+        <%= password_field_tag 'password', 'Password', :size => 20 %><br/>
 
   	<%= submit_tag 'Login' %>
 	<% end %>
