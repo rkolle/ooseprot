@@ -1,11 +1,5 @@
 class LoginController < ApplicationController
 
-  #before_filter :login_required, :only => ['welcome', 'change_password', 'hidden']
-
-  def authentication_form
-    @users = User.all
-  end
-
   def signup
     @user = User.new(@params[:user])
     if request.post?
@@ -30,14 +24,14 @@ class LoginController < ApplicationController
       else
         session[:user] = nil
         flash[:warning] = "Falsche Daten eingegeben!"
-        redirect_to :action => "authenticationForm"
+        redirect_to :action => "login"
       end
     end
   end
 
   def logout
     session[:user] = nil
-    flash[:message] = 'Logged out'
+    flash[:message] = 'Sie wurden erfolgreich ausgeloggt'
     redirect_to :action => 'login'
   end
 
@@ -53,5 +47,11 @@ class LoginController < ApplicationController
     end
   end
 
+  def welcome
 
+  end
+
+  def login
+
+  end
 end

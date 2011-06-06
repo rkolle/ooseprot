@@ -1,9 +1,9 @@
 <% if notice %>
 	<p id="notice"><%= notice %></p>
 	<% end %>
-	
+
 	<h5>list of available users</h5>
-	
+
 	<% @users.each do |user| %>
 		<div class="userentry">
 			<%= image_tag(user.avatar) %>&nbsp;<%= sanitize(user.username) %>&nbsp;
@@ -23,7 +23,7 @@
 
   	<%= submit_tag 'Login' %>
 	<% end %>
-	
+
 	<br/>
-	
+
   <%= link_to 'Registrieren', :controller => "users", :action => "new" %>
