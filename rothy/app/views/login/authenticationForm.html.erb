@@ -9,6 +9,7 @@
 			<%= image_tag(user.avatar) %>&nbsp;<%= sanitize(user.username) %>&nbsp;
 			<%= user.nachname %>, <%= user.vorname %>
 		</div>
+		<% end %>
 
 
 <% form_tag :action => "check" do %>
