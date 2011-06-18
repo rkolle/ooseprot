@@ -1,29 +1,28 @@
 <% if notice %>
 	<p id="notice"><%= notice %></p>
-	<% end %>
+<% end %>
+
 
 	<h5>list of available users</h5>
 
 	<% @users.each do |user| %>
+
 		<div class="userentry">
-			<%= image_tag(user.avatar) %>&nbsp;<%= sanitize(user.username) %>&nbsp;
+			&nbsp;<%= sanitize(user.username) %>&nbsp;
 			<%= user.nachname %>, <%= user.vorname %>
 		</div>
 	<% end %>
 
 
-	<% form_tag :action => "check", :method => :post do %>
-  	    <h3>Login</h3>
-
-        <label for="user_login">Benutzername:</label><br/>
+    <h3>Login</h3>
+	<% form_tag :action => :check, :method => :post do %>
+  	    <label for="user_login">Benutzername:</label><br/>
         <%= text_field_tag "username", 'Username', :size => 20 %><br/>
-
         <label for="user_password">Password:</label><br/>
         <%= password_field_tag 'password', 'Password', :size => 20 %><br/>
-
   	<%= submit_tag 'Login' %>
 	<% end %>
 
 	<br/>
 
-  <%= link_to 'Registrieren', :controller => "users", :action => "new" %>
+  <!--<%= link_to 'Registrieren', :controller => "users", :action => "new" %>-->

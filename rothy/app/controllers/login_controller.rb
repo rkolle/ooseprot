@@ -8,23 +8,23 @@ class LoginController < ApplicationController
         flash[:message] = "Signup successful"
         redirect_to :action => "welcome"
       else
-        flash[:warning] = "Signup unsuccessful"
+        flash[:notice] = "Signup unsuccessful"
       end
     end
   end
 
   def check
     if request.post?
-      u = User.where(:username => params[:username]).first
+      @user = User.where(:username => params[:username]).first
 
-      if u != nil
-        session[:user] = u
+      if @user != nil
+        session[:user] = @user
         flash[:message] = "Login erfolgreich"
-        redirect_to :controller => 'users', :action => 'index'
+        redirect_to :action => :welcome
       else
         session[:user] = nil
-        flash[:warning] = "Falsche Daten eingegeben!"
-        redirect_to :action => "login"
+        flash[:notice] = "Falsche Daten eingegeben!"
+        redirect_to :action => :login
       end
     end
   end
@@ -48,10 +48,10 @@ class LoginController < ApplicationController
   end
 
   def welcome
-
   end
 
   def login
-
+    #nur für entwicklungszwecke um alle vorhandenen User angezeigt zu bekommen
+    @users = User.all
   end
 end

@@ -15,8 +15,11 @@ Rothy::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
+
   # Sample of regular route:
   match 'login/check' => 'login#check'
+  match 'login/welcome' => 'login#welcome'
+  match 'login/logout' => 'login#logout'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
@@ -61,7 +64,7 @@ Rothy::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "login#authentication_form", :as => 'LogIn'
+  root :to => "login#login", :as => 'LogIn'
 
   # See how all your routes lay out with "rake routes"
 

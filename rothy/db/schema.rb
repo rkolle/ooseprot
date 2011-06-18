@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110606085448) do
+ActiveRecord::Schema.define(:version => 20110606124809) do
 
   create_table "preferences", :force => true do |t|
     t.datetime "created_at"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20110606085448) do
     t.string   "icq"
     t.string   "skype"
     t.integer  "semester"
+    t.string   "avatar"
   end
 
   create_table "usergroups", :force => true do |t|
@@ -40,10 +41,8 @@ ActiveRecord::Schema.define(:version => 20110606085448) do
     t.string   "nachname"
     t.string   "email"
     t.string   "username"
-    t.string   "avatar"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.decimal  "semester"
     t.string   "password"
   end
 

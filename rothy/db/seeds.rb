@@ -8,5 +8,16 @@
 
 User.delete_all
 
-User.create(:vorname => 'Robert', :nachname => 'Kolle', :username => 'kkolle2s', :email => 'robert.kolle@smail.inf.h-brs.de', :semester => 4, :avatar => 'default.jpg')
-User.create(:vorname => 'Philipp', :nachname => 'Thomas', :username => 'pthoma2s', :email => 'philipp.thomas@smail.inf.h-brs.de', :semester => 4, :avatar => 'default.jpg')
+User.create(
+    :vorname => 'Robert',
+    :nachname => 'Kolle',
+    :username => 'kkolle2s',
+    :email => 'robert.kolle@smail.inf.h-brs.de'
+)
+
+User.create(
+    :vorname => 'Philipp',
+    :nachname => 'Thomas',
+    :username => 'pthoma2s',
+    :email => 'philipp.thomas@smail.inf.h-brs.de'
+)
