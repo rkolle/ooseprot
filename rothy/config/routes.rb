@@ -7,6 +7,8 @@ Rothy::Application.routes.draw do
     delete 'logout' => :destroy
   end
   
+  get 'register' => 'user#new'
+  
   resources :users
 
   resources :usergroups
@@ -72,7 +74,7 @@ Rothy::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-    root :to => "login#welcome", :as => 'login'
+    root :to => "basic#index"
 
   # See how all your routes lay out with "rake routes"
 
