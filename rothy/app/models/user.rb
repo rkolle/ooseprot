@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
     attr_reader :password
     validate :password_must_be_present
 
-    default_scope :order => 'nachname'
+    default_scope :order => 'username'
     
     has_many :preferences, :dependent => :destroy
     has_one :profile

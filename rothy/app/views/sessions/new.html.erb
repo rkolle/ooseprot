@@ -7,17 +7,17 @@
 		<fildset>
 			<legend>LogIn</legend>
 				
-			<div>
+			<div style="margin:10px; padding:10px;">
 				<label for="name">Name:</label>
 				<%= text_field_tag :username, params[:username] %>
 			</div>
 				
-			<div>
+			<div style="margin:10px; padding:10px;">
 				<label for="password">Passwort:</label>
 				<%= text_field_tag :password, params[:password] %>
 			</div
 				
-			<div>
+			<div style="margin:10px; padding:10px;">
 				<%= submit_tag "Login" %>
 			</div>
 		</fildset>
