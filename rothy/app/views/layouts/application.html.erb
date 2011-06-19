@@ -14,7 +14,7 @@
 	<div id="navigation">
 		<ul>
 			<% if session[:user_id] %>
-				<li><%= link_to 'Logout', logout_path %></li>
+				<li><%= link_to 'Logout', logout_path, :method => :delete %></li>
 			<% else %>
 				<li><%= link_to 'LogIn', login_path %></li>
 				<li><%= link_to 'Register', register_path %></li>

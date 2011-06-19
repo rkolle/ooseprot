@@ -138,17 +138,20 @@ div#content {
   background-color: #49A8F5;
   border-bottom: 5px solid #AFD3F0;
   height: 24px;
-width: 100%;
-	margin-right:auto;
+	text-align: right;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 #navigation ul {
   margin: 0px;
   padding: 0px;
+	text-align: right;
 }
 
 #navigation li {
-  float: left;
+  float: right;
   list-style-type: none;
   margin: 0 2px 0 0;
   padding: 0;
@@ -161,4 +164,5 @@ width: 100%;
   margin: 0;
   padding: 4px 10px;
   text-decoration: none;
+	text-align: right;
 }
