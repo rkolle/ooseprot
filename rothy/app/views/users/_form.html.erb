@@ -27,14 +27,17 @@
     <%= f.label :username %><br />
     <%= f.text_field :username %>
   </div>
+
   <div class="field">
-    <%= f.label :avatar %><br />
-    <%= f.text_field :avatar %>
+    <%= f.label :password , 'Password'%><br />
+    <%= f.text_field :password, :size => 40 %>
   </div>
+
   <div class="field">
-    <%= f.label :semester %><br />
-    <%= f.text_field :semester %>
+    <%= f.label :password_confirmation, 'Confirm' %><br />
+    <%= f.text_field :password_confirmation, :size => 40 %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

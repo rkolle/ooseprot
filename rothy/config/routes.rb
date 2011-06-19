@@ -1,4 +1,14 @@
 Rothy::Application.routes.draw do
+  get 'admin' => 'admin#index'
+  
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+  
+  resources :users
+
   resources :usergroups
 
   resources :preferences
@@ -6,8 +16,6 @@ Rothy::Application.routes.draw do
   resources :profiles
 
   get "login/authenticationForm"
-
-  resources :users
   
   # Eigene Routen
   # map.connect '', :controller => "login_controller", :action => "check"
@@ -64,7 +72,7 @@ Rothy::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "login#login", :as => 'LogIn'
+  root :to => "login#login", :as => 'login'
 
   # See how all your routes lay out with "rake routes"
 

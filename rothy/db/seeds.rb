@@ -12,7 +12,10 @@ User.create(
     :vorname => 'Robert',
     :nachname => 'Kolle',
     :username => 'kkolle2s',
-    :email => 'robert.kolle@smail.inf.h-brs.de'
+    :email => 'robert.kolle@smail.inf.h-brs.de',
+    :password => 'test',
+    :salt => '21905033200.831118925565288',
+    :hashed_password = '5dff165b0b8b1547a3838628f4ce5b27cf6786fbd0bd74e422339951109e6b38'
 )
 
 User.create(
@@ -20,4 +23,7 @@ User.create(
     :nachname => 'Thomas',
     :username => 'pthoma2s',
     :email => 'philipp.thomas@smail.inf.h-brs.de'
+    :password => 'test',
+    :salt => '21905033200.831118925565288',
+    :hashed_password = '5dff165b0b8b1547a3838628f4ce5b27cf6786fbd0bd74e422339951109e6b38'
 )
