@@ -11,19 +11,22 @@
 <div id="main">
 <div id="header">
  <div id="headertitle">Rothy</div>
-</div>
-<div id="navigation">
-<ul>
-  <li><a href="/login">Login</a></li>
-  <li><a href="/login/logout">Logout</a></li>
-  <li><a href="/admin">Admin</a></li>
-</ul>
-</div>
-
-<div id="content">
-<%= yield %>
-</div>
+	<div id="navigation">
+		<ul>
+			<% if session[:user_id] %>
+				<li><%= link_to 'Logout', logout_path %></li>
+			<% else %>
+				<li><%= link_to 'LogIn', login_path %></li>
+				<li><%= link_to 'Register', register_path %></li>
+			<% end %>
+		</ul>
+	</div>
 </div>
 
-</body>
+			<div id="content">
+				<%= yield %>
+			</div>
+		</div>
+
+	</body>
 </html>
